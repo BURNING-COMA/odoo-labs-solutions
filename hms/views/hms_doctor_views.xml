@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <!-- from view
+        <record id='hms_doctor_form_view' model='ir.ui.view'>
+            <field name='name'>hms.doctor.form.view</field>
+            <field name='model'>hms.doctor</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <field name='first_name'/>
+                            <field name='last_name'/>
+                            <field name='age'/>
+                            <field name='image' widget='image'  />
+                        </group>
+                        <notebook string='Health Measures'>
+                            <page string='CR ratio'>
+                                <field name='cr_ratio'/>
+                            </page>
+                            <page string='Blood Type'>
+                                <field name='blood_type'/>
+                            </page>
+                            <page string='pcr'>
+                                <field name='pcr'/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+                
+            </field>
+        </record>
+    -->
+
+        <!-- default tree, form view -->
+        <record id='hms_doctor_action' model="ir.actions.act_window">
+            <field name='name'>doctors</field>
+            <field name='res_model'>hms.doctor</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+        <menuitem 
+                id='hms_doctors_menu' 
+                name='Doctors' 
+                parent='hms_root_menu' 
+                action='hms_doctor_action'/> 
+
+    </data>
+</odoo>
