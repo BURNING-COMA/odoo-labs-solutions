@@ -35,6 +35,11 @@ class HmsPatient( models.Model ):
 
     department_capacity = fields.Integer(related='department_id.capacity')
 
+    # TODO link model hms.patient with model res.partner.inhert ( as one2one )
+    # https://www.odoo.com/forum/help-1/one2one-relational-field-187864
+    customer_id = fields.Many2one( comodel_name='res.partner' )
+
+
     # DONE add API constraint is_valide,
     # DONE sql constrain UNIQUE 
     email = fields.Char()
