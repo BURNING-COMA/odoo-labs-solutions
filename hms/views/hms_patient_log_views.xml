@@ -6,6 +6,36 @@
             <field name='res_model'>hms.patient.log</field>    
         </record>
 
+
+        
+        <!-- log form view-->
+        <record id='hms_patient_log_form_view' model='ir.ui.view'>
+            <field name='name'>hms.patient.log.form.view</field>
+            <field name='model'>hms.patient.log</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                        <field name='description'  required='True'/>
+                        <field name='patient_id'  required='True'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id='hms_patient_log_tree_view' model='ir.ui.view'>
+            <field name='name'>hms.patient.log.tree.view</field>
+            <field name='model'>hms.patient.log</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='id' />
+                    <field name='description'/>
+                    <field name='patient_id'/>
+                    <field name='create_uid'/>
+                    <field name='create_date'/>
+                </tree>
+            </field>
+        </record>
+
    
         <menuitem id='hms_root_menu' name='HMS'/>
         <menuitem 

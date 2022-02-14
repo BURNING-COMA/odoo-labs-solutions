@@ -9,7 +9,7 @@
         'views\hms_department_views.xml',
         'views\hms_doctor_views.xml',
         'views\hms_patient_log_views.xml',
-        "views\/res_partner_inhert_views.xml",
+        "views\/res_partner_inherit_views.xml",
     ], 
     'depends': [
         'crm',

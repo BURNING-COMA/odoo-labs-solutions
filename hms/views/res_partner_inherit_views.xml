@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+
+        <!-- customer form view changes-->
+        <record id="res_partner_inherit_form" model="ir.ui.view">
+            <field name='name'>res.partner.inherit.form</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_form'/>
+            <field name='arch' type='xml'>
+
+                <!-- X -->
+                <xpath expr="//group[@name='misc']" position="inside">
+                    <field name='related_patient_id'/>
+                </xpath>
+
+                <!-- X -->
+                <xpath expr="//field[@name='vat']" position='attributes'>
+                    <attribute name='required'>1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- customer list view changes -->
+        <record id="res_partner_inherit_tree" model="ir.ui.view">
+            <field name='name'>res.partner.inherit.tree</field>
+            <field name='model'>res.partner</field>
+            <field name='inherit_id' ref='base.view_partner_tree'/>
+            <field name='arch' type='xml'>
+                <!-- or expr="//field[@name='email'] for example" -->
+                <xpath expr="//tree" position="inside">
+                    <field name='website'/>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
